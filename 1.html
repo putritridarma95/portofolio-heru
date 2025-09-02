@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - CHAERUDDINURSYAM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #1976d2;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      text-decoration: underline;
+    }
+
+    /* Header Section */
+    .header {
+      background: #2196f3;
+      color: white;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .header-text h1 {
+      font-size: 36px;
+    }
+
+    .header-text p {
+      margin: 15px 0;
+      line-height: 1.5;
+    }
+
+    .btn {
+      background: white;
+      color: #1976d2;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f0f0f0;
+    }
+
+    /* Experience Section */
+    .experience {
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .experience h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .experience p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 15px;
+      color: #1976d2;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-card ul li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .check {
+      color: #1976d2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">CHAERUDDIN</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Talks</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="header">
+    <img src="HERU.jpg" alt="Profile">
+    <div class="header-text">
+      <h1>Hai, Nama saya <br> <span style="color:#fff; font-weight:bold;">CHAERUDIN</span></h1>
+      <p>
+        Nama saya Chaeruddinursyam, saya adalah seorang pelajar di SMKS PANGERAN WIJAYA KUSUMA.Saya memiliki pengalama 
+        PKL sebagai teknisi di perusahaan TELKOM
+      </p>
+      <a href="#" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience">
+    <h2>Skills Yang Dimiliki</h2>
+    <p>
+      Saya dapat menggunakan word, dan canva, saya dapat bekerja sama dengan baik dalam tim 
+    </p>
+
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+          <li><span class="check">✔</span> React / Redux / Angular</li>
+          <li><span class="check">✔</span> HTML</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li><span class="check">✔</span> Python / Django</li>
+          <li><span class="check">✔</span> Ruby on Rails</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Others</h3>
+        <ul>
+          <li><span class="check">✔</span> DevOps</li>
+          <li><span class="check">✔</span> Unit Testing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Navbar Active State
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
